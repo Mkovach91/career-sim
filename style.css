@@ -10,11 +10,12 @@ nav {
   width: auto;
   height: auto;
   padding: 5px;
+
   background-color: rgba(42, 45, 43, 0.548);
   border: 2px solid rgb(0, 0, 2);
   display: flex;
   flex-direction: row;
-  
+ 
 }
 nav > div {
   display: flex;
@@ -32,6 +33,7 @@ a {
 .container1 {
   display: flex;
   flex-direction: column;
+
 }
 
 body {
@@ -156,4 +158,5 @@ a:hover {
 
 a:visited {
   color: blueviolet;
+
 }
