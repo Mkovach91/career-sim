@@ -39,10 +39,13 @@ a {
 body {
   font-family: sans-serif;
   line-height: 1.5;
+  min-height: 100vh;
+  background: #0c192c;
 }
 
 * {
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
@@ -88,6 +91,8 @@ body {
 
 .container2 {
   background-color: rgba(176, 192, 192, 0.7);
+  font-size: 1.3rem;
+  font-family: 'Times New Roman';
 }
 
 .container3 {
@@ -112,6 +117,7 @@ section > img {
   margin-top: 250px;
   margin-left: 70px;
   flex-direction: column;
+  margin-bottom: 350px;
 
 }
 
@@ -125,6 +131,8 @@ section > img {
 h2 {
   color: rgb(0, 0, 0);
   text-shadow: 1px 1px 0 rgb(255, 255, 255);
+  text-decoration: underline;
+  
 }
 
 footer {
@@ -132,11 +140,14 @@ footer {
   background-color: rgba(97, 164, 164, 0.71);
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: x-large;
-  position: fixed;
-  bottom: 0px;
+  position: relative;
+  bottom: 0;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  width: 100%;
+  min-height: 100px;
+  margin-top: 100px;
 }
 
 .button {
@@ -158,5 +169,54 @@ a:hover {
 
 a:visited {
   color: blueviolet;
+
+}
+
+ul  {
+  font-size: 1.3rem;
+  font-family: 'Times New Roman';
+}
+
+.background {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.bubbles {
+  position: relative;
+  display: flex;
+  
+}
+
+.bubbles span {
+  opacity: 50%;
+  position: relative;
+  width: 30px;
+  height: 30px;
+  background: #4fc3dc;
+  margin: 0 4px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 10px #4fc3dc44, 
+  0 0 50px #4fc3dc,
+  0 0 100px #4fc3dc;
+  animation: animate 15s linear infinite;
+  animation-duration: calc(125s / var(--i));
+}
+.bubbles span:nth-child(even){
+  background: #ff2d75;
+  box-shadow: 0 0 0 10px #ff2d7544, 
+  0 0 50px #ff2d75,
+  0 0 100px #ff2d75;
+}
+
+@keyframes animate {
+  0% {
+    transform: translateY(100vh) scale(0);
+  }
+  100% {
+    transform: translateY(-10vh) scale(1);
+  }
 
 }
